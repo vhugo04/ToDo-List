@@ -64,6 +64,7 @@
     user-select: none;
     cursor: pointer;
     position: relative;
+    text-align: left;
   }
   ul li::before{
     content: '';
@@ -106,3 +107,64 @@
   ul li span:hover{
     background-color: #edeef0;
   }
+
+  @media (width <= 480px){
+    .container {
+        width: 100%;
+        max-width: 370px;
+        margin: 100px auto;
+        padding: 30px 25px 60px;
+        border-radius: 20px;
+        text-align: center;
+      }
+      .task input {
+        border: 0;
+        outline: 0;
+        padding: 5px;
+        background: transparent;
+        font-size: 14px;
+      }
+
+      .task button {
+        border: 0;
+        outline: 0;
+        padding: 10px 40px;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        background: #ff5506;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+      #error {
+        margin: 12px 15px;
+        visibility: hidden;
+      }
+      ul li{
+        list-style: none;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+        text-align: left;
+      }
+      ul li span {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        color: #555;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        }
+      ul li span:hover{
+        background-color: #edeef0;
+        transition: 0.2s;
+      }
+      #error{
+        margin: 7px 10px;
+        visibility: hidden;
+      }
