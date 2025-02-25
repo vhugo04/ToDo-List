@@ -1,11 +1,11 @@
 const inputBox = document.querySelector(".input");
 const listContainer = document.querySelector("#task-container");
 
-const error = document.querySelector("#error");
+const error = document.querySelector(".error");
 
 function addTask() {
     if(inputBox.value === ''){
-        error.style.visibility = "visible"
+        error.style.display = "block"
     }
     else {
         let li = document.createElement("li");
@@ -14,8 +14,8 @@ function addTask() {
         let span = document.createElement("span");
         span.innerHTML = "\u00d7";
         li.appendChild(span);
+        error.style.display = "none"
 
-        error.style.visibility = "hidden";
     }
     inputBox.value = "";
 

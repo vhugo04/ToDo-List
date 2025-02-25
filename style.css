@@ -85,10 +85,10 @@
   ul li.checked::before{
     background-image: url(assets/images/checked.png);
   }
-
-  #error{
-    margin: 12px 15px;
-    visibility: hidden;
+  .error{
+    font-size: 15px;
+    margin-left: 10px;
+    display: none;
   }
   ul li span {
     position: absolute;
@@ -113,40 +113,72 @@
         width: 100%;
         max-width: 370px;
         margin: 100px auto;
-        padding: 30px 25px 60px;
+        padding: 30px 15px 60px;
         border-radius: 20px;
         text-align: center;
+      }
+      .container h1{
+        margin-bottom: 15px;
+        color: #002765;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+      }
+      .container h1 img{
+        width: 25px;
+        margin-left: 10px;
+      }
+      .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 30px;
+        padding-left: 20px;
+        margin-bottom: 15px;
+        background-color: #edeef0;
       }
       .task input {
         border: 0;
         outline: 0;
         padding: 5px;
         background: transparent;
-        font-size: 14px;
+        font-size: 10px;
       }
-
       .task button {
         border: 0;
         outline: 0;
-        padding: 10px 40px;
+        padding: 10px 20px;
         color: white;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 10px;
         background: #ff5506;
-        border-radius: 30px;
+        border-radius: 20px;
         cursor: pointer;
       }
-      #error {
-        margin: 12px 15px;
-        visibility: hidden;
+      .error{
+        font-size: 12px;
+        display: none;
+        text-align: left;
       }
       ul li{
         list-style: none;
-        font-size: 16px;
+        font-size: 12px;
         user-select: none;
         cursor: pointer;
         position: relative;
         text-align: left;
+      }
+      ul li::before{
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-image: url(assets/images/unchecked.png);
+        background-size: cover;
+        background-position: center;
+        top: 12px;
+        left: 8px;
       }
       ul li span {
         position: absolute;
@@ -154,7 +186,7 @@
         top: 5px;
         width: 30px;
         height: 30px;
-        font-size: 18px;
+        font-size: 17px;
         color: #555;
         line-height: 30px;
         text-align: center;
